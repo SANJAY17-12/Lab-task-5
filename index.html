@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JTMK Mobile Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            font-weight: 600;
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .ui-content {
+            padding: 20px;
+        }
+        .ui-btn {
+            background-color: #0077b5;
+            border: none;
+            font-weight: bold;
+        }
+        .ui-btn:hover {
+            background-color: #005a8c;
+        }
+
+        .social-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .social-sidebar a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0;
+            border-radius: 0 5px 5px 0;
+            background-color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-sidebar a img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        .project-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .project-box img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .project-info {
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .report-btn {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+
+        .report-btn:hover {
+            background-color: #ddd;
+        }
+
+        footer h4 {
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Social Sidebar -->
+<div class="social-sidebar">
+    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+    <a href="#"><img src="github.png" alt="GitHub"></a>
+    <a href="#"><img src="x.png" alt="Twitter"></a>
+    <a href="#"><img src="youtube.png" alt="YouTube"></a>
+    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+</div>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="home">
+ <div data-role="header" data-position="fixed">
+		<div style="display: flex; align-items: center; padding: 5px 10px;">
+        <img src="jtmk.jpg" alt="JTMK Logo" style="height:40px; margin-right: 10px;">
+        <h1 style="margin: 0;">JABATAN TEKNOLOGI MAKLUMAT & KOMUNIKASI</h1>
+    </div>
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#home" class="ui-btn-active">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
+</div>
+
+
+    <div role="main" class="ui-content">
+        <h2>HEY, MY NAME IS JTMK</h2>
+        <p>JTMK is the Department of Information and Communication Technology (JTMK) offering DDT courses 
+        (Diploma in Information Technology (Digital Technology)) at Seberang Perai Polytechnic (PSP).</p>
+        <a href="#projects" class="ui-btn ui-corner-all ui-shadow">Explore Projects</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <footer><h4>&copy; 1103/1117/1093. All rights reserved.</h4></footer>
+    </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div data-role="page" id="about">
+    <div data-role="header" data-position="fixed">
+        <h1>About Us</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about" class="ui-btn-active">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <div class="profile-card">
+            <img src="profile1.jpg" alt="Yeagesh A/L Jagan">
+            <h2>YEAGESH A/L JAGAN</h2>
+            <p>Head of Department<br>Phone: 012-3456789</p>
+        </div>
+        <div class="profile-card">
+            <img src="profile2.jpg" alt="Sanjay A/L Gopi Raj">
+            <h2>SANJAY A/L GOPI RAJ</h2>
+            <p>Program Head (Software Track)<br>Phone: 012-3456789</p>
+        </div>
+        <div class="profile-card">
+            <img src="profile3.jpg" alt="Devaraaaj A/L Munisparan">
+            <h2>DEVARAAJ A/L MUNISPARAN</h2>
+            <p>Program Head (Software Track)<br>Phone: 012-3456789</p>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <footer><h4>&copy; 1103/1117/1093. All rights reserved.</h4></footer>
+    </div>
+</div>
+
+<!-- PROJECTS PAGE -->
+<div data-role="page" id="projects">
+    <div data-role="header" data-position="fixed">
+        <h1>Projects</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects" class="ui-btn-active">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>Our Projects</h2>
+
+        <div class="project-box">
+            <img src="weather.jpg" alt="Weather App Icon">
+            <div class="project-info">
+                <div class="project-title">Weather App</div>
+                <a href="weather_app_report.pdf" target="_blank" class="report-btn">View Report</a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <img src="surveillance_robot.jpg" alt="Surveillance Robot Icon">
+            <div class="project-info">
+                <div class="project-title">Surveillance Robot</div>
+                <a href="surveillance_robot_report.pdf" target="_blank" class="report-btn">View Report</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <footer><h4>&copy; 1103/1117/1093. All rights reserved.</h4></footer>
+    </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div data-role="page" id="contact">
+    <div data-role="header" data-position="fixed">
+        <h1>Contact Us</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact" class="ui-btn-active">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <a href="tel:0123456789" class="ui-btn ui-icon-phone ui-btn-icon-left">Call Us</a>
+        <a href="mailto:info@jtmk.edu.my" class="ui-btn ui-icon-mail ui-btn-icon-left">Email Us</a>
+        <a href="https://api.whatsapp.com/send?phone=60123456789" class="ui-btn ui-icon-comment ui-btn-icon-left">WhatsApp Us</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <footer><h4>&copy; 1103/1117/1093. All rights reserved.</h4></footer>
+    </div>
+</div>
+
+</body>
+</html>
